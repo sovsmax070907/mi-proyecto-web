@@ -1,0 +1,87 @@
+<html>
+<HTML lang="es">
+<head>
+     <meta charset="UTF-8">
+     <title>Ferrari</title>
+     <style>
+        .zoom {
+            width: 150px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .zoom.grande {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+        .ocultar {
+            display: none;
+        }
+     </style>   
+</head>
+<body>
+     <h1>Ferrari</h1>
+<table border="1">
+    <tr>
+	<td align="center" class="contenedor">
+ 	     <img src="D:\proyecto\Ferrari.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: green;"> Ferrari 458 Italia </span> </strong> </p>
+             <p class="descripcion">Su carrocería de aluminio contribuye a reducir el peso y mejorar el rendimiento dinámico. En el interior, el modelo destaca por su enfoque en la ergonomía y la calidad, con asientos deportivos de cuero y un volante inspirado en la Fórmula 1​. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Ferrari2.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: green;"> Ferrari 250 GTO (1962) </span> </strong> </p>
+             <p class="descripcion">Es considerado uno de los mejores Ferrari de la historia y ha sido el coche más caro en subastas. Diseñado para la competición, especialmente en la 24 Horas de Le Mans. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Ferrari3.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: green;"> Ferrari F40 (1987) </span> </strong> </p>
+             <p class="descripcion">Se desarrolló para celebrar el 40º aniversario de la marca, su motor V8 biturbo de 2.9 litros generaba 478 CV, lo que le permitía superar los 320 km/h, convirtiéndose en el coche de producción más rápido de su época.​ </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Ferrari4.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: green;"> Ferrari 288 GTO (1984) </span> </strong> </p>
+             <p class="descripcion">Fue el segundo modelo en llevar las siglas "Gran Turismo Omologata" después del 250 GTO. </p>
+       </td>
+       </tr>
+       <tr>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Ferrari5.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: green;"> Ferrari Testarossa (1984) </span> </strong> </p>
+             <p class="descripcion">Es un ícono de los años 80, famoso por su aparición en la serie "Miami Vice". Con un diseño agresivo y entradas de aire laterales distintivas. Este modelo contaba con un motor V12 de 4.9 litros que entregaba 390 CV.  </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Ferrari6.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: green;"> Ferrari LaFerrari (2013) </span> </strong> </p>
+             <p class="descripcion">Representa la cúspide de la tecnología híbrida de Ferrari, combinando un motor V12 atmosférico de 6.3 litros con 800 CV y un sistema eléctrico Hy-KERS que elevaba la potencia total a 963 CV. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Ferrari7.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: green;"> Ferrari 488 GTB (2015) </span> </strong> </p>
+             <p class="descripcion">Es una evolución del exitoso 458 Italia, con mejoras aerodinámicas y una reducción en el peso. Está equipado con un motor V8 biturbo de 3.9 litros que entrega 670 CV, logrando una aceleración de 0 a 100 km/h en 3 segundos. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Ferrari8.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: green;"> Ferrari 812 Superfast (2017) </span> </strong> </p>
+             <p class="descripcion">Es el Ferrari de calle más potente jamás fabricado hasta la fecha. Cuenta con un motor V12 atmosférico de 6.5 litros que desarrolla 800 CV, permitiéndole alcanzar una velocidad máxima de más de 340 km/h. </p>
+        </td>
+<script>
+        function mostrarSoloEsta(imagenSeleccionada) {
+            var contenedores = document.querySelectorAll(".contenedor");
+            var contenedorSeleccionado = imagenSeleccionada.closest(".contenedor");
+            
+            if (imagenSeleccionada.classList.contains("grande")) {
+                contenedores.forEach(cont => cont.classList.remove("ocultar"));
+                imagenSeleccionada.classList.remove("grande");
+            } else {
+                contenedores.forEach(cont => {
+                    if (cont !== contenedorSeleccionado) {
+                        cont.classList.add("ocultar");
+                    }
+                });
+                imagenSeleccionada.classList.add("grande");
+            }
+        }
+</script>
+</body>
+</html>
